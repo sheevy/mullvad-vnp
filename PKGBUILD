@@ -1,7 +1,7 @@
 # Maintainer: alicewww <almw@protonmail.com>
 pkgname=mullvad-vpn
-pkgver=2018.2
-pkgrel=2
+pkgver=2018.3
+pkgrel=1
 pkgdesc="VPN Client for Mullvad.net, a bitcoin-friendly VPN for anonymity and privacy"
 url="https://www.mullvad.net"
 arch=('any')
@@ -15,7 +15,7 @@ install=
  
 source=(LICENSE.md mullvad-daemon.service mullvad-vpn.desktop "https://github.com/mullvad/mullvadvpn-app/releases/download/${pkgver}/MullvadVPN-${pkgver}_x86_64.rpm")
 
-sha256sums=('8951bda6e616df7418ff3f80d9699f96da704df64f3bc9f0d5bb75a103680456' '77b71d613ef09c6ffbcfa66a59f787246f64d4463843e648edc6fbbea18dd55e' '8090fcecc2e07cb3e384387f14a181c4acf7ee01db53dad322b51649a1f5dc24' '8f687d304e6d4ef25a33c570cbf5e4016f25e172854a0b45aad2f25339c748ac')
+sha256sums=('8951bda6e616df7418ff3f80d9699f96da704df64f3bc9f0d5bb75a103680456' '77b71d613ef09c6ffbcfa66a59f787246f64d4463843e648edc6fbbea18dd55e' '8090fcecc2e07cb3e384387f14a181c4acf7ee01db53dad322b51649a1f5dc24' '966cc532d9ec63e597f9428163f94cdc075c0d881ca4f1cf73f5f634648f6734')
 
 package() {
     #unpack rpm
