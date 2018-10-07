@@ -4,12 +4,12 @@ pkgver=2018.3
 pkgrel=1
 pkgdesc="VPN Client for Mullvad.net, a bitcoin-friendly VPN for anonymity and privacy"
 url="https://www.mullvad.net"
-arch=('any')
+arch=('x86_64')
 license=('GPLv3')
 depends=(rpmextract gcc openssl gtk2 gconf libappindicator-gtk2 libappindicator-gtk3)
 makedepends=()
-conflicts=(mullvad-vpn-new)
-replaces=(mullvad)
+conflicts=(mullvad-vpn-old)
+replaces=(mullvad-vpn-old)
 backup=()
 install=
  
@@ -38,7 +38,7 @@ package() {
 
   # Main binary
   mkdir -p ${pkgdir}/usr/bin
-  ln -s "/opt/Mullvad VPN/mullvad-vpn" "${pkgdir}/usr/bin/${pkgname}"
+  ln -s "${pkgdir}/opt/${pkgname}/${pkgname}" "${pkgdir}/usr/bin/${pkgname}"
 
   #icons
   install -dm755 "${pkgdir}/usr/share/icons/hicolor"
